@@ -27,7 +27,7 @@ public class LoginPage {
 
 	}
 
-	@Step("Login Page Login: {0} & Password : {1} Entry Test")
+	@Step("Login Page Login: {0} & Password : {1} Entry Test add")
 	public AccountPage login(String logintext, String passtext) {
 
 		eu.doSendKeys(login, logintext);
