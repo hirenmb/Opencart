@@ -13,7 +13,7 @@ public class LoginPage {
 	By login = By.id("input-email");
 	By pass = By.id("input-password");
 	By btn = By.xpath("(//*[@type='submit'])[1]");
-	By link = By.xpath("(//a[text()='Register'])[2]");
+	By link = By.xpath("//*[@id=\"column-right\"]/div/a[2]");
 
 	public WebDriver driver;
 	public ExcelUtil excelUtil;

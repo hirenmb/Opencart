@@ -45,7 +45,7 @@ public class LoginPageTest extends BaseTest {
 @Description("Login PAge Title Test")
 	@Severity(SeverityLevel.BLOCKER)
 	@Test
-	public void dclickLink() {
+	public void xdclickLink() {
 		loginPage.link();
 	}
 	
