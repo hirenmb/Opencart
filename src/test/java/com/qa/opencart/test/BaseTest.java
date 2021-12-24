@@ -26,6 +26,7 @@ public class BaseTest {
 	public AccountPage accPage;
 	public SearchPage searchPage;
 	public ProductPage productPage;
+	
 	@Parameters({"browser", "browserversion"})
 	@BeforeTest
 	public void setup(String browser, String browserVersion ) throws IOException {
