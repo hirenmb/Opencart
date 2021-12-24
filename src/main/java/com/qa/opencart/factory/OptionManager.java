@@ -16,13 +16,19 @@ public class OptionManager {
 
 	public ChromeOptions getChromOptions() {
 		co = new ChromeOptions();
+		
 		if(Boolean.parseBoolean(prop.getProperty("headless"))) {
 			co.addArguments("--headless");
+			
 		}
 		
 		if(Boolean.parseBoolean(prop.getProperty("incongito"))) {
 			co.addArguments("--incognito");
+			
 		}
+	
+		co.addArguments("--disable-dev-shm-usage");
+		co.addArguments("--no-sandbox");
 		return co;
 	}
 	
@@ -30,12 +36,14 @@ public class OptionManager {
 	public FirefoxOptions getFirefoxOptions() {
 		fo = new FirefoxOptions();
 		if(Boolean.parseBoolean(prop.getProperty("headless"))) {
-			co.addArguments("--headless");
+			fo.addArguments("--headless");
 		}
 		
 		if(Boolean.parseBoolean(prop.getProperty("incongito"))) {
-			co.addArguments("--incognito");
+			fo.addArguments("--incognito");
 		}
+		fo.addArguments("--disable-dev-shm-usage");
+		fo.addArguments("--no-sandbox");
 		return fo;
 	}
 	

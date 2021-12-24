@@ -6,6 +6,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import com.qa.opencart.factory.DriverFactory;
 import com.qa.opencart.pages.AccountPage;
@@ -25,11 +26,18 @@ public class BaseTest {
 	public AccountPage accPage;
 	public SearchPage searchPage;
 	public ProductPage productPage;
+	@Parameters({"browser", "browserversion"})
 	@BeforeTest
-	public void setup() throws IOException {
+	public void setup(String browser, String browserVersion ) throws IOException {
 
 		df = new DriverFactory();
 		prop = df.prop_init();
+
+		if(browser!=null) {
+			prop.setProperty("browser", browser);
+			prop.setProperty("browserVersion", browserVersion);
+		}
+		
 		driver = df.init_driver(prop);
 		loginPage = new LoginPage(driver);
 	

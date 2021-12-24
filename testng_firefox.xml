@@ -16,25 +16,25 @@
 
 	<!-- <test name="Open Cart Test Search Page"> <classes> <class name="com.qa.opencart.test.SearchPageTest"/> 
 		</classes> </test> -->
-	<test name="Open Cart Login Page -ch - 89">
-		<parameter name="browser" value="chrome" />
-		<parameter name="browserversion" value="89" />
+	<test name="Open Cart Login Page firefox -83">
+		<parameter name="browser" value="firefox" />
+		<parameter name="browserversion" value="83" />
 		<classes>
 			<class name="com.qa.opencart.test.LoginPageTest" />
 		</classes>
 	</test>
 
-	<test name="Open Cart Account Page -ch - 90">
-		<parameter name="browser" value="chrome" />
-		<parameter name="browserversion" value="90" />
+	<test name="Open Cart Account Page firefox - 83">
+		<parameter name="browser" value="firefox" />
+		<parameter name="browserversion" value="83" />
 
 		<classes>
 			<class name="com.qa.opencart.test.AccountPageTest" />
 		</classes>
 	</test>
-	<test name="Open Cart Registration Page -firefox - 83">
+	<test name="Open Cart Registration Page -firefox - 57">
 		<parameter name="browser" value="firefox" />
-		<parameter name="browserversion" value="83" />
+		<parameter name="browserversion" value="57" />
 		
 		<classes>
 			<class name="com.qa.opencart.test.RegistrationPageTest" />
