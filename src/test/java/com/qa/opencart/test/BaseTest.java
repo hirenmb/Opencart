@@ -27,8 +27,8 @@ public class BaseTest {
 	public SearchPage searchPage;
 	public ProductPage productPage;
 	
-	@Parameters({"browser", "browserversion"})
 	@BeforeTest
+	@Parameters({"browser", "browserversion"})
 	public void setup(String browser, String browserVersion ) throws IOException {
 
 		df = new DriverFactory();
